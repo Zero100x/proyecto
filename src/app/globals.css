@@ -12,6 +12,7 @@
   --color-lilac: oklch(0.75 0.14 300);
   --color-ocean: oklch(0.55 0.18 230);
 --color-sand: oklch(0.88 0.08 80);
+--color-canvas: oklch(0.98 0.005 270);
 }
 
 @media (prefers-color-scheme: dark) {
