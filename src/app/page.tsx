@@ -1,30 +1,27 @@
-  export default function Home() {
+import Navbar from "../components/Navbar";
 
-    return (
-  
-      <main className='flex flex-col items-center justify-center w-screen h-screen bg-canvas'>
-  
-        <h1 className='text-4xl font-bold mb-12 text-ocean'>Diego Ceron</h1>
-  
-  
-  
-        <section className='flex flex-col gap-8 items-center'>
-  
-          <span className='w-20 h-20 rounded-full bg-coral shadow-lg'></span>
-  
-          <span className='w-20 h-20 rounded-full bg-mint shadow-lg'></span>
-  
-          <span className='w-20 h-20 rounded-full bg-lilac shadow-lg'></span>
-  
-          <span className='w-20 h-20 rounded-full bg-ocean shadow-lg'></span>
-  
-          <span className='w-20 h-20 rounded-full bg-sand shadow-lg'></span>
-  
-        </section>
-  
-      </main>
-  
-    );
-  
-  }
-  
+export default function Home() {
+  return (
+    <main>
+      <Navbar />
+      
+      {/* Hero Section */}
+      <section id="home" className="py-20 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+        <div className="container mx-auto px-6 text-center">
+          <h1 className="text-5xl font-bold mb-6">Hola, soy Diego Cerón</h1>
+          <p className="text-xl mb-8">Desarrollador de software apasionado por la tecnología</p>
+          <div className="space-x-4">
+            <a href="#contact" className="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300">
+              Contáctame
+            </a>
+            <a href="/cv.pdf" download className="border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition duration-300">
+              Descargar CV
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Otras secciones se agregarán en commits posteriores */}
+    </main>
+  );
+}
