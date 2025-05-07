@@ -3,10 +3,7 @@ import Navbar from "../components/Navbar";
 export default function Home() {
   return (
     <main>
-      <Navbar />
-
-      {/* Hero Section */}
-        
+      <Navbar />        
       {/* Sección Bienvenida + Acerca de mí */}
       <section className="bg-gray-100 py-12 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
