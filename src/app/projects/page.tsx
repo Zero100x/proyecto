@@ -1,8 +1,7 @@
+"use client";
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 import Navbar from '@/components/Navbar';
-
-<Navbar></Navbar>
 
 const projects = [
   {
@@ -44,55 +43,65 @@ const projects = [
 ];
 
 const Projects = () => {
-    <nav className="bg-white shadow-lg sticky top-0 z-50"></nav>
   return (
-    
-    <section id="projects" className="py-20 bg-portfolio-mint/30">
-      <div className="section-container">
-        <h2 className="section-title">Mis proyectos</h2>
+    <div className="min-h-screen bg-white">
+      <Navbar />
+      
+      <main className="max-w-7xl mx-auto px-4 py-16">
+        {/* Título principal */}
+        <h1 className="text-4xl font-bold text-center mb-16 text-gray-800">Mis proyectos</h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Grid de proyectos */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {projects.map((project) => (
-            <article key={project.id} className="project-card">
-              <div className="h-56 overflow-hidden">
+            <article 
+              key={project.id} 
+              className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow"
+            >
+              {/* Imagen del proyecto */}
+              <div className="h-64 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
+              
+              {/* Contenido de la tarjeta */}
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-portfolio-dark mb-2">{project.title}</h3>
-                <p className="text-portfolio-text mb-4">{project.description}</p>
+                <h3 className="text-2xl font-bold text-gray-800 mb-3">{project.title}</h3>
+                <p className="text-gray-600 mb-5">{project.description}</p>
                 
-                <div className="flex flex-wrap gap-2 mb-4">
+                {/* Tecnologías */}
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech) => (
                     <span 
                       key={tech}
-                      className="px-3 py-1 bg-white rounded-full text-sm text-portfolio-accent border border-portfolio-accent/20"
+                      className="px-3 py-1 bg-blue-50 rounded-full text-sm text-blue-700"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
                 
-                <div className="flex justify-between mt-4">
+                {/* Botones */}
+                <div className="flex justify-between">
                   <a 
                     href={project.demoUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex items-center text-portfolio-accent hover:text-portfolio-dark transition-colors"
+                    className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   >
-                    <ExternalLink size={16} className="mr-1" />
+                    <ExternalLink size={16} className="mr-2" />
                     Ver Demo
                   </a>
                   <a 
                     href={project.githubUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex items-center text-portfolio-accent hover:text-portfolio-dark transition-colors"
+                    className="flex items-center px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-colors"
                   >
-                    <Github size={16} className="mr-1" />
+                    <Github size={16} className="mr-2" />
                     GitHub
                   </a>
                 </div>
@@ -100,8 +109,8 @@ const Projects = () => {
             </article>
           ))}
         </div>
-      </div>
-    </section>
+      </main>
+    </div>
   );
 };
 
