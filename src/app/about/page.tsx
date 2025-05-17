@@ -21,62 +21,68 @@ const techIcons = [
 ];
 
 const About = () => {
-   
   return (
-    
-    <section className="bg-white">
-      <Navbar></Navbar>
-         
-      <div className="section-container">
-        <h2 className="section-title">Acerca de mi</h2>
+    <div className="min-h-screen bg-white">
+      <Navbar />
+      
+      <main className="max-w-6xl mx-auto px-4 py-12">
+        {/* Título centrado */}
+        <h1 className="text-3xl font-bold text-center mb-12 text-gray-800">Acerca de mi</h1>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-          <div className="lg:col-span-2">
-            <div className="prose max-w-none text-portfolio-text">
-              <p className="text-lg mb-4">
-                Soy estudiante de quinto semestre en la Universidad Cooperativa 
-                de Colombia con una fuerte motivación por aprender, crear y 
-                resolver problemas a través del desarrollo de soluciones tecnológicas. 
+        {/* Contenedor principal con texto e imagen */}
+        <div className="flex flex-col lg:flex-row gap-12">
+          {/* Texto a la izquierda */}
+          <div className="lg:w-2/3">
+            <div className="prose prose-lg max-w-none text-gray-700">
+              <p className="mb-6">
+                Soy estudiante de quinto semestre en la universidad cooperativa de colombia con una fuerte motivación por aprender, crear y resolver problemas a través del desarrollo de soluciones tecnológicas. Me apasiona el diseño de sistemas, la programación y la mejora continua de mis habilidades técnicas y creativas. Durante mi formación, he trabajado en proyectos académicos y personales que me han permitido aplicar conocimientos en lenguajes de programación, estructuras de datos, arquitectura de software y desarrollo web.
               </p>
-              <p className="text-lg mb-4">
-                Me apasiona el diseño de sistemas, la programación y la mejora continua 
-                de mis habilidades técnicas y creativas. Durante mi formación, he 
-                trabajado en proyectos académicos y personales que me han permitido 
-                aplicar conocimientos en lenguajes de programación, estructuras de datos, 
-                arquitectura de software y desarrollo web.
-              </p>
-              <p className="text-lg mb-4">
-                Me considero una persona comprometida, proactiva y siempre dispuesta 
-                a asumir nuevos retos. Mi objetivo es seguir creciendo como profesional, 
-                contribuyendo con ideas innovadoras y trabajando en equipo para generar 
-                un impacto positivo en el entorno tecnológico.
+              
+              <p className="mb-6">
+                Me considero una persona comprometida, proactiva y siempre dispuesta a asumir nuevos retos. Mi objetivo es seguir creciendo como profesional, contribuyendo con ideas innovadoras y trabajando en equipo para generar un impacto positivo en el entorno tecnológico.
               </p>
             </div>
-            <div className="mt-8 flex flex-wrap gap-6">
-              {techIcons.map((tech) => (
-                <div key={tech.name} className="flex flex-col items-center">
-                  <img src={tech.image} alt={tech.name} className="w-16 h-16" />
-                  <span className="mt-2 text-sm text-portfolio-text">{tech.name}</span>
-                </div>
-              ))}
+
+            {/* Sección de tecnologías */}
+            <div className="mt-12">
+              <h2 className="text-xl font-semibold mb-6 text-gray-800">Tecnologías que domino:</h2>
+              <div className="flex flex-wrap gap-6">
+                {techIcons.map((tech) => (
+                  <div key={tech.name} className="flex flex-col items-center">
+                    <img 
+                      src={tech.image} 
+                      alt={tech.name} 
+                      className="w-14 h-14 object-contain transition-transform hover:scale-110"
+                    />
+                    <span className="mt-2 text-sm text-gray-600">{tech.name}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-          <div className="flex justify-center">
-            <div className="w-full max-w-sm">
+
+          {/* Imagen a la derecha */}
+          <div className="lg:w-1/3 flex flex-col items-center">
+            <div className="sticky top-24">
               <img
-                src="/lovable-uploads/4da5cd71-82a6-4b40-a1ac-c5fe4e816743.png"
+                src="Diego Ceron.jpg"
                 alt="Diego Ceron"
-                className="w-full h-auto rounded-lg shadow-md"
+                className="w-full h-auto rounded-lg shadow-xl border-4 border-white"
               />
-              <div className="mt-4 text-center">
-                <h3 className="font-bold text-xl text-portfolio-dark">Diego Ceron</h3>
-                <p className="text-portfolio-text">Desarrollador de Software</p>
+              <div className="mt-6 text-center">
+                <h3 className="text-2xl font-bold text-gray-800">Diego Ceron</h3>
+                <p className="text-gray-600 mt-2">Desarrollador de Software</p>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+        
+        {/* Línea divisoria y firma */}
+        <div className="border-t border-gray-300 pt-8 mt-12">
+          <p className="text-right text-gray-800 font-medium">Diego Ceron</p>
+        </div>
+      </main>
+    </div>
   );
 };
 
