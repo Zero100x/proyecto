@@ -135,7 +135,7 @@ const TestimonialsPage: React.FC = () => {
               />
               <button
   type="submit"
-  className="bg-portfolio-accent text-white font-bold py-2 px-4 rounded hover:bg-blue-700 mt-4"
+  className="bg-portfolio-accent text-#455bff font-bold py-2 px-4 rounded hover:bg-blue-700 mt-4"
 >
   Enviar Testimonio
 </button>
