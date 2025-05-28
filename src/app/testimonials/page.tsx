@@ -6,27 +6,27 @@ import Navbar from '@/components/Navbar';
 const testimonials = [
   {
     id: 1,
-    name: "Ana Martínez",
-    role: "Directora de Proyectos",
+    name: "Juan Vizuette",
+    role: "Compañero de Universidad",
     content:
-      "Diego demostró excelentes habilidades técnicas y una gran capacidad de trabajo en equipo durante su colaboración en nuestro proyecto. Su dedicación y proactividad fueron fundamentales para alcanzar los objetivos en tiempo récord.",
-    avatar: "",
+      "Diego siempre aporta ideas claras y soluciones prácticas en nuestros trabajos. Es confiable y hace que el equipo funcione mejor.",
+    avatar: "/testimonio1.png",
   },
   {
     id: 2,
-    name: "Carlos Vega",
-    role: "Desarrollador Senior",
+    name: "Anderson Ojeda",
+    role: "Compañero de Universidad",
     content:
-      "He tenido la oportunidad de mentorear a Diego y siempre me ha impresionado su capacidad de aprendizaje y su compromiso. Asimila conceptos nuevos con rapidez y los aplica de manera efectiva en sus proyectos.",
-    avatar: "",
+      "Diego es de esos compañeros que siempre entregan trabajos impecables y a tiempo. ¡Da gusto trabajar con alguien tan responsable!",
+    avatar: "/testimonio2.png",
   },
   {
     id: 3,
-    name: "Laura Jiménez",
-    role: "Compañera de Universidad",
+    name: "Johan Delgado",
+    role: "Compañero de Universidad",
     content:
-      "Diego es un excelente compañero de equipo, siempre dispuesto a ayudar y aportar ideas innovadoras. Su enfoque estructurado y atención al detalle hacen que sea un placer trabajar con él en proyectos académicos.",
-    avatar: "",
+      "Aunque aún estamos aprendiendo, Diego se destaca por su curiosidad y ganas de ir más allá en cada reto.",
+    avatar: "/testimonio3.png",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function TestimonialsPage() {
                 </section>
               </header>
               <blockquote className="relative pl-4">
-                <p className="text-gray-600 italic before:content-['“'] before:text-4xl before:text-blue-200 before:absolute before:-top-2 before:-left-2">
+                <p className="text-gray-600 italic before:text-4xl before:text-blue-200 before:absolute before:-top-2 before:-left-2">
                   {content}
                 </p>
               </blockquote>
@@ -72,5 +72,11 @@ export default function TestimonialsPage() {
         </section>
       </main>
     </section>
+    
   );
+
+  
 }
+
+         
+          

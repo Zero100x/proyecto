@@ -9,6 +9,7 @@ export default function Navbar() {
   const menuItems = [
     { name: 'Bienvenida', path: '/' },
     { name: 'Acerca de mí', path: '/about' },
+    { name: 'Pasatiempos', path: '/hobbies' },
     { name: 'Mis proyectos', path: '/projects' },
     { name: 'Testimonios', path: '/testimonials' },
     { name: 'Contactos', path: '/contact' }

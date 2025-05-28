@@ -1,135 +1,108 @@
+"use client";
+
 import Navbar from "@/components/Navbar";
+import Image from "next/image";
+
+const projects = [
+  { id: 1, title: "Diseño de imagen de tajeta", image: "/image1.png" },
+  { id: 2, title: "inicio de pagina magical mirai", image: "/image2.png" },
+  { id: 3, title: "Plataforma de notas", image: "/image3.png" },
+  { id: 4, title: "Mantenimiento y Especificaciones de Vehículos", image: "/image4.png" },
+];
+
+const testimonials = [
+  { id: 1, name: "Juan Vizuette", image: "/testimonio1.png" },
+  { id: 2, name: "Anderson Ojeda", image: "/testimonio2.png" },
+  { id: 3, name: "Johan Delgado", image: "/testimonio3.png" },
+];
+
 export default function Home() {
   return (
-    
-    <main className="bg-white">
-      <Navbar></Navbar>
-    
-      {/* Columna izquierda - Bienvenida y Acerca de mí */}
-      <section className="max-w-6xl mx-auto flex flex-col md:flex-row">
-        <div className="w-full md:w-1/1 bg-gray-100 p-5">
+    <section className="min-h-screen bg-white scroll-smooth">
+      <Navbar />
+
+      <main className="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {/* Columna Izquierda */}
+        <article className="space-y-8 lg:col-span-1">
           {/* Bienvenida */}
-          <section className="bg-gray-200 p-6 mb-4 rounded-md">
-            <h2 className="text-xl font-semibold text-gray-700 mb-3">Bienvenid@</h2>
-            <p className="text-gray-700">
+          <section id="inicio" className="bg-gray-100 rounded-lg p-6 space-y-4">
+            <h1 className="text-2xl font-semibold text-gray-800">Bienvenid@</h1>
+            <p className="text-gray-700 leading-relaxed">
               Hola, soy Diego Ceron, un apasionado de la tecnología y el desarrollo de software. Aquí encontrarás una recopilación de mis proyectos, habilidades y experiencias que reflejan mi crecimiento como profesional en el mundo digital.
             </p>
           </section>
 
-          {/* Acerca de mí */}
-          <section className="bg-gray-200 p-6 rounded-md">
-            <h2 className="text-xl font-semibold text-gray-700 mb-3">Acerca de mi</h2>
-            <p className="text-gray-700 mb-4">
-              Soy estudiante de quinto semestre en la univercidad cooperativa de colombia
+          {/* Acerca de mí extendido */}
+          <section className="bg-gray-100 rounded-lg p-6 space-y-4 flex flex-col items-center">
+            <h2 className="text-xl font-semibold text-gray-800">Acerca de mí</h2>
+            <p className="text-gray-700 text-center">
+              Soy estudiante de quinto semestre en la Universidad Cooperativa de Colombia.
             </p>
-            <h3 className="text-lg font-semibold text-gray-700 mb-2">Contactos</h3>
-            <p className="text-gray-700">
-              cerondiego19@gmail.com<br />
-              318836638
-            </p>
-            <img
-              src="/Diego Ceron.jpg"
-              alt="Diego Ceron"
-              className="w-24 h-24 rounded-full object-cover mt-4"
-            />
+            <address className="not-italic text-gray-700 text-center space-y-1">
+              <p>Contactos</p>
+              <a href="mailto:cerondiego19@gmail.com" className="underline block">cerondiego19@gmail.com</a>
+              <a href="tel:+57318836638" className="underline block">318836638</a>
+            </address>
+            <figure className="w-40 h-40 rounded-full overflow-hidden mt-4">
+              <Image
+                src="/Diego Ceron.jpg"
+                alt="Diego Ceron"
+                width={160}
+                height={160}
+                className="object-cover"
+              />
+            </figure>
           </section>
-        </div>
+        </article>
 
-        {/* Columna derecha - Proyectos y Testimonios */}
-        <div className="w-full md:w-2/3 p-6">
-          {/* Proyectos */}
-          <section className="mb-10">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">Mis proyectos</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {[1, 2, 3, 4].map((i) => (
-                <section key={i} className="bg-gray-200 p-4 rounded-md">
-                  <h3 className="text-gray-700 mb-2">Título del Proyecto</h3>
-                  <div className="bg-teal-700 text-white py-12 flex items-center justify-center rounded-md">
-                    <p>Imagen proyecto</p>
-                  </div>
-                </section>
+        {/* Columna Derecha */}
+        <article className="lg:col-span-2 space-y-12">
+          {/* Mis proyectos */}
+          <section id="proyectos">
+            <header className="mb-4">
+              <h2 className="text-2xl font-semibold text-gray-800">Mis proyectos</h2>
+            </header>
+            <ul role="list" className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {projects.map(({ id, title, image }) => (
+                <li key={id} className="bg-gray-100 rounded-lg p-4 space-y-3">
+                  <h3 className="text-gray-700">{title}</h3>
+                  <figure className="h-40 relative rounded-md overflow-hidden bg-gray-200">
+                    <Image
+                      src={image}
+                      alt={title}
+                      fill
+                      className="object-cover"
+                    />
+                  </figure>
+                </li>
               ))}
-            </div>
+            </ul>
           </section>
 
           {/* Testimonios */}
-          <section>
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">Testimonios</h2>
-            <div className="flex flex-wrap gap-4">
-              {[1, 2, 3].map((i) => (
-                <div key={i} className="bg-gray-200 px-6 py-4 rounded-md">
-                  <p>Nombre testimonio</p>
-                </div>
+          <section id="testimonios">
+            <header className="mb-4">
+              <h2 className="text-2xl font-semibold text-gray-800">Testimonios</h2>
+            </header>
+            <ul role="list" className="flex space-x-6 overflow-x-auto pb-2">
+              {testimonials.map(({ id, name, image }) => (
+                <li key={id} className="flex-shrink-0 text-center space-y-2">
+                  <figure className="w-24 h-24 rounded-full overflow-hidden mx-auto">
+                    <Image
+                      src={image}
+                      alt={name}
+                      width={96}
+                      height={96}
+                      className="object-cover"
+                    />
+                  </figure>
+                  <figcaption className="text-gray-700">{name}</figcaption>
+                </li>
               ))}
-            </div>
+            </ul>
           </section>
-        </div>
-      </section>
-    </main>
+        </article>
+      </main>
+    </section>
   );
 }
-
-{/* Contenido principal */}
-<section className="max-w-6xl mx-auto p-6">
-<div className="bg-gray-100 rounded-md p-8">
-  <h1 className="text-2xl font-semibold text-gray-700 mb-4">Acerca de mi</h1>
-  
-  <div className="flex flex-col md:flex-row md:gap-8 items-center md:items-start">
-    <div className="w-full md:w-3/4">
-      <p className="text-gray-700 mb-4">
-        Soy estudiante de quinto semestre en la univercidad cooperativa 
-        de colombia con una fuerte motivación por aprender, crear y 
-        resolver problemas a través del desarrollo de soluciones 
-        tecnológicas. Me apasiona el diseño de sistemas, la programación 
-        y la mejora continua de mis habilidades técnicas y creativas.
-      </p>
-      
-      <p className="text-gray-700 mb-4">
-        Durante mi formación, he trabajado en proyectos académicos y 
-        personales que me han permitido aplicar conocimientos en 
-        lenguajes de programación, estructuras de datos, arquitectura de 
-        software y desarrollo web.
-      </p>
-      
-      <p className="text-gray-700 mb-6">
-        Me considero una persona comprometida, proactiva y siempre 
-        dispuesta a asumir nuevos retos. Mi objetivo es seguir creciendo 
-        como profesional, contribuyendo con ideas innovadoras y 
-        trabajando en equipo para generar un impacto positivo en el 
-        entorno tecnológico.
-      </p>
-      
-      {/* Iconos de tecnologías */}
-      <div className="flex items-center space-x-6 mt-4">
-        <div className="w-16 h-16">
-          <img src="/javascript-logo.png" alt="JavaScript" className="w-full h-full object-contain" />
-        </div>
-        <div className="w-16 h-16">
-          <img src="/react-logo.png" alt="React" className="w-full h-full object-contain" />
-        </div>
-        <div className="w-16 h-16">
-          <img src="/c-sharp-logo.png" alt="C#" className="w-full h-full object-contain" />
-        </div>
-        <div className="w-16 h-16">
-          <img src="/python-logo.png" alt="Python" className="w-full h-full object-contain" />
-        </div>
-      </div>
-    </div>
-    
-    <div className="md:w-1/4 flex flex-col items-center mt-6 md:mt-0">
-      <div className="w-48 h-48 rounded-full overflow-hidden mb-3">
-        <img 
-          src="/Diego Ceron.jpg" 
-          alt="Diego Ceron" 
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <h2 className="text-xl font-medium text-gray-700">Diego Ceron</h2>
-      
-    </div>
-  </div>
-</div>
-</section>
-
-
-

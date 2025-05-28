@@ -2,98 +2,76 @@
 
 import { ExternalLink, Github } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import Image from "next/image";
 
 const projects = [
   {
     id: 1,
-    title: "Sistema de Gestión de Inventarios",
-    description:
-      "Aplicación web para gestionar inventarios de pequeñas empresas con dashboard interactivo y reportes en tiempo real.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-    technologies: ["React", "Node.js", "MongoDB"],
+    title: "Diseño de imagen de tajeta",
+    description: "Dieseño de tarjeta Diseño de interfaces.",
+    image: "/image1.png",
+    Languages: ["TypeScript", "CSS", "JavaScript"],
     demoUrl: "https://demo.example.com",
-    githubUrl: "https://github.com/Zero100x",
+    githubUrl: "https://github.com/Zero100x/image_1",
   },
   {
     id: 2,
-    title: "Aplicación de Tareas Colaborativas",
-    description:
-      "Plataforma para gestión de tareas en equipo con funcionalidades de asignación, seguimiento y notificaciones.",
-    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b",
-    technologies: ["Vue.js", "Firebase", "Tailwind CSS"],
+    title: "inicio de pagina magical mirai ",
+    description: "inicio de la pagina de magical mirai .",
+    image: "/image2.png",
+    Languages: ["TypeScript", "CSS", "JavaScript"],
     demoUrl: "https://demo.example.com",
-    githubUrl: "https://github.com/Zero100x",
+    githubUrl: "https://github.com/Zero100x/proyecto_miku",
   },
   {
     id: 3,
-    title: "Plataforma Educativa",
-    description:
-      "Sistema de gestión de aprendizaje con cursos interactivos, evaluaciones automatizadas y seguimiento de progreso.",
-    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8",
-    technologies: ["React", "Express", "PostgreSQL"],
+    title: "Plataforma de notas",
+    description: "plataforma basica de notas.",
+    image: "/image3.png",
+    Languages: ["React", "Express", "PostgreSQL"],
     demoUrl: "https://demo.example.com",
-    githubUrl: "https://github.com/Zero100x",
+    githubUrl: "https://github.com/Zero100x/ISWElectiva110202-10",
   },
   {
     id: 4,
-    title: "Portal de Noticias Locales",
-    description:
-      "Sitio web para visualización de noticias locales con categorización, búsqueda avanzada y perfiles de usuario.",
-    image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c",
-    technologies: ["Next.js", "Strapi CMS", "GraphQL"],
-    demoUrl: "https://demo.example.com",
-    githubUrl: "https://github.com/Zero100x",
+    title: "Mantenimiento y Especificaciones de Vehículos",
+    description: "Pagina de Mantenimiento y Especificaciones de Vehículos de los 10 autos más populares en Colombia.",
+    image: "/image4.png",
+    Languages: ["TypeScript", "CSS", "JavaScript"],
+    demoUrl: "https://taller-next-js-tailwind.vercel.app",
+    githubUrl: "https://github.com/Zero100x/Taller_NextJs_Tailwind",
   },
 ];
 
 type Project = typeof projects[number];
 
-function ProjectCard({
-  title,
-  description,
-  image,
-  technologies,
-  demoUrl,
-  githubUrl,
-}: Project) {
+function ProjectCard({ title, description, image, Languages, demoUrl, githubUrl }: Project) {
   return (
-    <article className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow">
-      <figure className="h-64 overflow-hidden">
-        <img
+    <article className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow">
+      <figure className="h-64 relative">
+        <Image
           src={image}
           alt={title}
-          className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+          fill
+          className="object-cover hover:scale-105 transition-transform duration-500"
         />
       </figure>
       <section className="p-6">
         <h3 className="text-2xl font-semibold text-gray-800 mb-3">{title}</h3>
         <p className="text-gray-600 mb-4">{description}</p>
         <ul className="flex flex-wrap gap-2 mb-6">
-          {technologies.map((tech) => (
-            <li
-              key={tech}
-              className="px-3 py-1 bg-blue-100 rounded-full text-sm text-blue-800 font-medium"
-            >
+          {Languages.map((tech) => (
+            <li key={tech} className="px-3 py-1 bg-blue-100 rounded-full text-sm text-blue-800 font-medium">
               {tech}
             </li>
           ))}
         </ul>
         <footer className="flex justify-between">
-          <a
-            href={demoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-          >
+          <a href={demoUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
             <ExternalLink size={16} />
             Ver Demo
           </a>
-          <a
-            href={githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-colors"
-          >
+          <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-colors">
             <Github size={16} />
             GitHub
           </a>
@@ -123,3 +101,5 @@ export default function Projects() {
     </section>
   );
 }
+
+
