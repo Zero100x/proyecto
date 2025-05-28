@@ -25,17 +25,17 @@ export default function About() {
     <section className="min-h-screen bg-white">
       <Navbar />
 
-      <main className="max-w-6xl mx-auto px-4 py-12">
+      <main className="max-w-6xl mx-auto px-4 py-12 space-y-12">
         <h1 className="text-3xl font-bold text-center mb-12 text-gray-800">Acerca de mí</h1>
 
         <section className="flex flex-col lg:flex-row gap-12">
           <article className="lg:w-2/3">
             <section className="text-gray-700 space-y-6 leading-relaxed">
               <p>
-              ¡Hola! Soy Diego Cerón, un apasionado estudiante de 20 años cursando mi quinto semestre en la Universidad Cooperativa de Colombia. Mi mundo gira en torno a la tecnología, los motores y los videojuegos. Cuando no estoy programando o diseñando sistemas, probablemente esté analizando las últimas innovaciones en automóviles o disfrutando de partidas competitivas en mis juegos favoritos.
+                ¡Hola! Soy Diego Cerón, un apasionado estudiante de 20 años cursando mi quinto semestre en la Universidad Cooperativa de Colombia. Mi mundo gira en torno a la tecnología, los motores y los videojuegos. Cuando no estoy programando o diseñando sistemas, probablemente esté analizando las últimas innovaciones en automóviles o disfrutando de partidas competitivas en mis juegos favoritos.
               </p>
               <p>
-              Me defino como un solucionador de problemas con una mentalidad creativa. Disfruto transformar ideas en soluciones tecnológicas funcionales, ya sea mediante código, diseño de interfaces o optimización de sistemas. Mi motivación es aprender constantemente y aplicar ese conocimiento para impactar positivamente en proyectos reales.
+                Me defino como un solucionador de problemas con una mentalidad creativa. Disfruto transformar ideas en soluciones tecnológicas funcionales, ya sea mediante código, diseño de interfaces o optimización de sistemas. Mi motivación es aprender constantemente y aplicar ese conocimiento para impactar positivamente en proyectos reales.
               </p>
             </section>
 
@@ -76,6 +76,34 @@ export default function About() {
         <p className="border-t border-gray-300 pt-8 mt-12 text-right text-gray-800 font-medium">
           Diego Ceron
         </p>
+
+        {/* Experiencia académica y laboral */}
+        <section id="experiencia" className="space-y-8">
+          <h2 className="text-2xl font-semibold text-gray-800">Experiencia Académica y Laboral</h2>
+          <ul role="list" className="space-y-6 text-gray-700">
+            <li className="bg-gray-100 rounded-xl p-6 shadow-md">
+              <h3 className="text-xl font-semibold">Ingeniería en Software</h3>
+              <p className="text-sm text-gray-600">Universidad Cooperativa de Colombia — 2021 - Actualidad</p>
+              <p className="mt-2">
+                Formación centrada en desarrollo web, estructuras de datos, bases de datos y arquitectura de software. Proyectos destacados incluyen plataformas de encuestas dinámicas y sistemas de rendimiento en videojuegos con React y Three.js.
+              </p>
+            </li>
+            <li className="bg-gray-100 rounded-xl p-6 shadow-md">
+              <h3 className="text-xl font-semibold">Auxiliar de Taller Mecánico</h3>
+              <p className="text-sm text-gray-600">Taller Mecánico Familiar — 2018 - Presente</p>
+              <p className="mt-2">
+                Participación en mantenimientos preventivos y correctivos de vehículos. Aprendizaje práctico en diagnóstico de fallas, uso de herramientas especializadas y atención al cliente.
+              </p>
+            </li>
+            <li className="bg-gray-100 rounded-xl p-6 shadow-md">
+              <h3 className="text-xl font-semibold">Freelance en Desarrollo Web</h3>
+              <p className="text-sm text-gray-600">Proyectos Independientes — 2023 - Presente</p>
+              <p className="mt-2">
+                Creación de sitios web estáticos y dinámicos usando Next.js, Tailwind CSS y MongoDB. Enfocado en diseño responsivo, optimización de rendimiento y experiencia de usuario.
+              </p>
+            </li>
+          </ul>
+        </section>
       </main>
     </section>
   );
