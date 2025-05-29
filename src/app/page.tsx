@@ -41,7 +41,7 @@ export default function Home() {
             <address className="not-italic text-gray-700 text-center space-y-1">
               <p>Contactos</p>
               <a href="mailto:cerondiego19@gmail.com" className="underline block">cerondiego19@gmail.com</a>
-              <a href="tel:+57318836638" className="underline block">318836638</a>
+              <a href="tel:+573188346638" className="underline block">318836638</a>
             </address>
             <figure className="w-40 h-40 rounded-full overflow-hidden mt-4">
               <Image
