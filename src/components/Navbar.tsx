@@ -19,7 +19,7 @@ export default function Navbar() {
     <header className="bg-white shadow-lg sticky top-0 z-50">
       <nav className="max-w-6xl mx-auto px-4" aria-label="Main Navigation">
         
-        {/* Layout para móvil */}
+        
         <section className="md:hidden flex justify-between items-center py-4">
           <Link href="/">
             <span className="font-semibold text-gray-500 text-lg">Diego Cerón</span>
@@ -37,7 +37,7 @@ export default function Navbar() {
           </button>
         </section>
 
-        {/* Layout para escritorio */}
+        
         <section className="hidden md:flex flex-col items-center py-4">
           <ul className="flex space-x-8" role="list">
             {menuItems.map((item, index) => (
@@ -53,7 +53,7 @@ export default function Navbar() {
           </ul>
         </section>
 
-        {/* Menú móvil desplegable */}
+        
         {isOpen && (
           <section className="md:hidden pb-4 flex flex-col items-center space-y-3">
             <ul className="w-full flex flex-col items-center space-y-3" role="list">

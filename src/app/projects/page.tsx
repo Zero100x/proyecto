@@ -1,6 +1,6 @@
 "use client";
 
-import { ExternalLink, Github } from "lucide-react";
+import { Github } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 
@@ -11,7 +11,6 @@ const projects = [
     description: "Dieseño de tarjeta Diseño de interfaces.",
     image: "/image1.png",
     Languages: ["TypeScript", "CSS", "JavaScript"],
-    demoUrl: "https://demo.example.com",
     githubUrl: "https://github.com/Zero100x/image_1",
   },
   {
@@ -20,7 +19,6 @@ const projects = [
     description: "inicio de la pagina de magical mirai .",
     image: "/image2.png",
     Languages: ["TypeScript", "CSS", "JavaScript"],
-    demoUrl: "https://demo.example.com",
     githubUrl: "https://github.com/Zero100x/proyecto_miku",
   },
   {
@@ -29,7 +27,6 @@ const projects = [
     description: "plataforma basica de notas.",
     image: "/image3.png",
     Languages: ["React", "Express", "PostgreSQL"],
-    demoUrl: "https://demo.example.com",
     githubUrl: "https://github.com/Zero100x/ISWElectiva110202-10",
   },
   {
@@ -38,14 +35,13 @@ const projects = [
     description: "Pagina de Mantenimiento y Especificaciones de Vehículos de los 10 autos más populares en Colombia.",
     image: "/image4.png",
     Languages: ["TypeScript", "CSS", "JavaScript"],
-    demoUrl: "https://taller-next-js-tailwind.vercel.app",
     githubUrl: "https://github.com/Zero100x/Taller_NextJs_Tailwind",
   },
 ];
 
 type Project = typeof projects[number];
 
-function ProjectCard({ title, description, image, Languages, demoUrl, githubUrl }: Project) {
+function ProjectCard({ title, description, image, Languages, githubUrl }: Project) {
   return (
     <article className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow">
       <figure className="h-64 relative">
@@ -66,12 +62,13 @@ function ProjectCard({ title, description, image, Languages, demoUrl, githubUrl 
             </li>
           ))}
         </ul>
-        <footer className="flex justify-between">
-          <a href={demoUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-            <ExternalLink size={16} />
-            Ver Demo
-          </a>
-          <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-colors">
+        <footer className="flex justify-end">
+          <a
+            href={githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-colors"
+          >
             <Github size={16} />
             GitHub
           </a>
@@ -101,5 +98,3 @@ export default function Projects() {
     </section>
   );
 }
-
-

@@ -67,37 +67,32 @@ export default function About() {
               />
               <figcaption className="mt-6 text-center">
                 <h3 className="text-2xl font-bold text-gray-800">Diego Ceron</h3>
-                <p className="text-gray-600 mt-2">Desarrollador de Software</p>
+                <p className="text-gray-600 mt-2">Estudiante de ingeniería de Software</p>
               </figcaption>
             </figure>
           </aside>
         </section>
 
-        <p className="border-t border-gray-300 pt-8 mt-12 text-right text-gray-800 font-medium">
-          Diego Ceron
-        </p>
-
-        {/* Experiencia académica y laboral */}
         <section id="experiencia" className="space-y-8">
           <h2 className="text-2xl font-semibold text-gray-800">Experiencia Académica y Laboral</h2>
           <ul role="list" className="space-y-6 text-gray-700">
             <li className="bg-gray-100 rounded-xl p-6 shadow-md">
               <h3 className="text-xl font-semibold">Ingeniería en Software</h3>
-              <p className="text-sm text-gray-600">Universidad Cooperativa de Colombia — 2021 - Actualidad</p>
+              <p className="text-sm text-gray-600">Universidad Cooperativa de Colombia — 2023 - Actualidad</p>
               <p className="mt-2">
                 Formación centrada en desarrollo web, estructuras de datos, bases de datos y arquitectura de software. Proyectos destacados incluyen plataformas de encuestas dinámicas y sistemas de rendimiento en videojuegos con React y Three.js.
               </p>
             </li>
-            <li className="bg-gray-100 rounded-xl p-6 shadow-md">
-              <h3 className="text-xl font-semibold">Auxiliar de Taller Mecánico</h3>
-              <p className="text-sm text-gray-600">Taller Mecánico Familiar — 2018 - Presente</p>
+              <li className="bg-gray-100 rounded-xl p-6 shadow-md">
+              <h3 className="text-xl font-semibold">Técnico en Informática</h3>
+              <p className="text-sm text-gray-600">I.E.M Técnico Industrial — 2022</p>
               <p className="mt-2">
-                Participación en mantenimientos preventivos y correctivos de vehículos. Aprendizaje práctico en diagnóstico de fallas, uso de herramientas especializadas y atención al cliente.
+                Formación técnica con énfasis en fundamentos de programación, mantenimiento de equipos, redes básicas y desarrollo de software. Participación en proyectos académicos enfocados en soluciones tecnológicas prácticas durante la etapa escolar.
               </p>
             </li>
             <li className="bg-gray-100 rounded-xl p-6 shadow-md">
               <h3 className="text-xl font-semibold">Freelance en Desarrollo Web</h3>
-              <p className="text-sm text-gray-600">Proyectos Independientes — 2023 - Presente</p>
+              <p className="text-sm text-gray-600">Proyectos Independientes — 2025 - Presente</p>
               <p className="mt-2">
                 Creación de sitios web estáticos y dinámicos usando Next.js, Tailwind CSS y MongoDB. Enfocado en diseño responsivo, optimización de rendimiento y experiencia de usuario.
               </p>

@@ -19,7 +19,7 @@ export default function Hobbies() {
             className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-700"
             role="list"
           >
-            {/* Videojuegos */}
+            
             <li className="bg-gray-100 rounded-xl p-6 flex flex-col items-center space-y-3 shadow-md">
               <figure className="w-24 h-24 overflow-hidden rounded-full">
                 <Image
@@ -66,7 +66,7 @@ export default function Hobbies() {
               </figcaption>
             </li>
 
-            {/* Música */}
+            
             <li className="bg-gray-100 rounded-xl p-6 flex flex-col items-center space-y-3 shadow-md">
               <figure className="w-24 h-24 overflow-hidden rounded-full">
                 <Image
@@ -108,7 +108,7 @@ export default function Hobbies() {
               </figcaption>
             </li>
 
-            {/* Anime */}
+            
             <li className="bg-gray-100 rounded-xl p-6 flex flex-col items-center space-y-3 shadow-md">
               <figure className="w-24 h-24 overflow-hidden rounded-full">
                 <Image
@@ -138,7 +138,7 @@ export default function Hobbies() {
               </figcaption>
             </li>
 
-            {/* Mecánica Automotriz */}
+            
             <li className="bg-gray-100 rounded-xl p-6 flex flex-col items-center space-y-3 shadow-md">
               <figure className="w-24 h-24 overflow-hidden rounded-full">
                 <Image

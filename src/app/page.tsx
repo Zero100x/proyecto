@@ -22,9 +22,9 @@ export default function Home() {
       <Navbar />
 
       <main className="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Columna Izquierda */}
+        
         <article className="space-y-8 lg:col-span-1">
-          {/* Bienvenida */}
+          
           <section id="inicio" className="bg-gray-100 rounded-lg p-6 space-y-4">
             <h1 className="text-2xl font-semibold text-gray-800">Bienvenid@</h1>
             <p className="text-gray-700 leading-relaxed">
@@ -32,7 +32,7 @@ export default function Home() {
             </p>
           </section>
 
-          {/* Acerca de mí extendido */}
+          
           <section className="bg-gray-100 rounded-lg p-6 space-y-4 flex flex-col items-center">
             <h2 className="text-xl font-semibold text-gray-800">Acerca de mí</h2>
             <p className="text-gray-700 text-center">
@@ -55,9 +55,9 @@ export default function Home() {
           </section>
         </article>
 
-        {/* Columna Derecha */}
+        
         <article className="lg:col-span-2 space-y-12">
-          {/* Mis proyectos */}
+          
           <section id="proyectos">
             <header className="mb-4">
               <h2 className="text-2xl font-semibold text-gray-800">Mis proyectos</h2>
@@ -79,7 +79,7 @@ export default function Home() {
             </ul>
           </section>
 
-          {/* Testimonios */}
+          
           <section id="testimonios">
             <header className="mb-4">
               <h2 className="text-2xl font-semibold text-gray-800">Testimonios</h2>
